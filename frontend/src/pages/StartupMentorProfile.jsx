@@ -31,7 +31,8 @@ function StartupMentorProfile() {
         setOffers(offersResponse.data);
       } catch (requestError) {
         setError(
-          requestError.response?.data?.message || "Failed to load mentor profile",
+          requestError.response?.data?.message ||
+            "Failed to load mentor profile",
         );
       } finally {
         setLoading(false);
@@ -185,7 +186,7 @@ function StartupMentorProfile() {
               aria-label="Close"
               onClick={() => setOfferModalOpen(false)}
             >
-              ⊗
+              X
             </button>
 
             <h2 id="offer-modal-title">Offer Job</h2>
